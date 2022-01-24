@@ -1,0 +1,36 @@
+# The secret number guess game
+
+print('WELCOME TO THE SECRET NUMBER GUESS GAME !')
+print('''
+ INSTRUCTIONS :  YOU WILL HAVE 3 CHANCES TO MAKE A GUESS.
+                 YOU HAVE TO GUESS A NUMBER IN THE RANGE (1-9.)
+                 YOU WIN IF YOU THE CORRECT GUESS WITHIN THE GUESS LIMITS, OTHERWISE YOU LOSE! ''')
+
+secret_number = 3
+guess_limit = 3
+guess_count = 0           #we define all the variables 
+list_1 = [1,2,3,4,5,6,7,8,9]  
+    
+    
+while guess_count < guess_limit :
+    
+    guess = int(input('MAKE A GUESS: '))
+    guess_count += 1
+       
+    if guess == secret_number:
+        print('CONGRATULATIONS! YOU WON !')          #break will help us to get out of the loop once the correct guess is made
+        break
+        
+    elif guess_count < 3 and guess != secret_number and guess in list_1 :
+        print('TRY AGAIN !')
+             
+    while guess not in list_1 and guess_count < 3:            
+            print('INVALID GUESS, PLEASE ENTER A NUMBER BETWEEN (1-9)')#this while loop will help us to check the user input
+            break
+            
+    
+            
+    
+else:
+    print('OUT OF CHOIECS, BETTER LUCK NEXT TIME !')
+    
