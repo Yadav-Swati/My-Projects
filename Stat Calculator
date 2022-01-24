@@ -1,0 +1,124 @@
+# welcome to Stat_Calculator
+
+print('Welcome to Stat_Calculator \n This is a Statistical Calculator where you can carry out the following operations: \n 1 Mean \n 2 Median \n 3 Mode \n 4 Variance \n 5 Standard Deviation \n 6 Factorial')
+print('enter the number corresponding to the operation you are interested to carry out (i.e 1, 2, 3, 4 or 5)')
+operation = int(input())
+
+
+
+#mean
+def mean():
+    print('Mathematical average of a set of two or more numbers is called Mean.')
+    n = int(input('enter the total count of numbers whose mean you would like to calculate : '))
+    sum = 0
+    for i in range(1,n+1):
+        num = int(input('enter number : '))
+        sum += num 
+    mean = sum/n
+    print('the Mean of the sequence is',mean)  
+
+
+
+#median
+def median():
+    print('A value or quantity lying at the midpoint of given sequence of numbers is Median.')
+    n = int(input('enter the total count of numbers whose median you would like to calculate : '))
+    median_list = []
+    for i in range(1,n+1):
+        num = int(input('enter number : '))
+        median_list.append(num)
+    median_list.sort() #or do reverse
+    if n%2 == 0:
+        med_1_index = n//2
+        med_2_index = (n//2) - 1
+        print('the first median is : ',median_list.pop(med_1_index))
+        print('the second median is : ',median_list.pop(med_2_index))
+        print('since the number of numbers in the sequence is even, we will have 2 median values.')
+    else :
+        med_index = n//2
+        median = median_list.pop(med_index)
+        print('Median of the sequence',median_list, 'is',median)
+
+
+
+def mode():
+    print('The value that appears most often in a set of data values is called Mode.')
+    n = int(input('enter the total number of distinct numbers in the sequence whose mode you would like to calculate'))
+    mode_num_list = []
+    mode_frequency_list = []
+    for i in range(1,n+1):
+        num = int(input('enter number : '))
+        mode_num_list.append(num)  #adding numbers to the list
+        frequency = int(input('enter frequency of the above written number : '))
+        mode_frequency_list.append(frequency)   #adding frequency of above numbers to the list. The numbers in previous list and their frequencies in this list both have the same index values
+    max_frequeny_of_some_number = max(mode_frequency_list)  
+    num_index = mode_num_list.index(max_frequeny_of_some_number)
+    mode = mode_num_list.pop(num_index)
+    print('The Mode of the given sequence of numbers is',mode)
+
+
+
+def variance():
+    print('Variability from mean is called Variance.')
+    n = int(input('enter the total number of numbers in your sequence : '))
+    variance_list = []
+    for i in range(1,n+1):
+        num = int(input('enter number : '))
+        variance_list.append(num)
+    mean_numerator = sum(variance_list)
+    mean = mean_numerator/n
+    difference_list = [] 
+    for i in variance_list:
+        difference = i - mean
+        difference_sq = difference**2
+        difference_list.append(difference_sq)
+    variance_numerator = sum(difference_list)
+    variance = variance_numerator/n
+    print('The variance of the sequence', variance_list,'is', variance)
+
+    
+def standard_deviation():
+    import math
+    print('The measure of dispersion of data in relation to mean is called Standard Variation.')
+    n = int(input('enter the total number of numbers in your sequence : '))
+    variance_list = []
+    for i in range(1,n+1):
+        num = int(input('enter number : '))
+        variance_list.append(num)
+    mean_numerator = sum(variance_list)
+    mean = mean_numerator/n
+    difference_list = [] 
+    for i in variance_list:
+        difference = i - mean
+        difference_sq = difference**2
+        difference_list.append(difference_sq)
+    variance_numerator = sum(difference_list)
+    variance = variance_numerator/n
+    standard_deviation = math.sqrt(variance)
+    print('The Standard Deviation of the sequence', variance_list, 'is' ,standard_deviation)
+
+
+def factorial():
+    print('Product of an integer and all the integers below it is called Factorial.')
+    n = int(input('enter the number whose factorial you would like to calculate : '))
+    factorial = 1
+    for i in range(1,n+1):
+        factorial *= i 
+    print('factorial of',n,'is',factorial)
+
+
+
+if operation == 1:
+    mean()
+elif operation == 2:
+    median()
+elif operation == 3:
+    mode()
+elif operation == 4:
+    variance()  
+elif operation == 5:
+    standard_deviation()
+elif operation == 6:
+    factorial()
+else :
+    print('error')  
