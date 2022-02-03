@@ -1,0 +1,47 @@
+print('WHICH MEMBER OF AVENGER ARE YOU MOST LIKE? TAKE THIS QUIZ AND FIND OUT NOW!!')
+print('')
+
+print('  Ahhhh the Avengers. How much enjoyment have these comics and movies given us over the past 50 years?\n  Starting off with just 5 original characters, 92 other superheros have been involved in the Avengers squad over the   years.\n  From Captain America to Iron Man, Thor to the Hulk, the Avengers are just legendary. The question is, which one of  these superheroes are you? Well, we’re about to find out in our ultimate Avengers quiz!')
+print('')
+print('  ALL THE BEST! \n RULES ARE SIMPLE: You just have to type the option number in the blank after every question! and then press enter')
+
+print('')
+print("QUESTION - 1: \n What height is most suited to you? \n 1) 5'5.5 \n 2) 5'10 \n 3) 6'1 \n 4) 6'4")
+_1 = int(input())
+
+
+print('')
+print("QUESTION - 2: \n Your Biggest flaw? \n 1) Your Past \n 2) Multi tasking \n 3) Ego \n 4) Cockiness")
+_2 = int(input())
+
+
+print('')
+print("QUESTION - 3: \n Which weapon would you like the most? \n 1) Super Suit  \n 2) Bow and Arrow \n 3) Your looks \n 4)  Hammer ")
+_3 = int(input())
+
+
+print('')
+print("QUESTION - 4: \n What's your favourite Olympic Sport? \n 1) Weight Lifting \n 2) Archery \n 3) Taekwondo \n 4) Marathon")
+_4 = int(input())
+
+
+print('')
+print("QUESTION - 5: \n What's your best feature? \n 1) Your Eyes \n 2) Your slf-control \n 3) Perseverance \n 4) Your wit")
+_5 = int(input())
+  
+  
+add = _1 + _2 + _3 + _4 + _5 
+
+if add <=13 and add>=11:    
+    print("YOU ARE HAWKYEYE! \n An archer with perfect accuracy and a quiver of trick arrows, Clint Barton's wit is usually faster than his lightning-quick reflexes! Though this expert archer doesn't always follow the rules, he long ago proved himself an invaluable member of The Avengers as Hawkeye!")
+elif add <=16 and add >=14:
+    print("YOU ARE IRON MAN! \n When billionaire industrialist Tony Stark dons his sophisticated steel-mesh armor, he becomes a living high-tech weapon - the world's greatest fighting machine. Tony has primed his ultra modern creation for waging state of the art campaigns, attaining sonic flight, and defending the greater good! He is the Armored Avenger - driven by a heart that is part machine, but all hero! He is the INVINCIBLE IRON MAN!")
+elif add <=18 and add >=17:
+    print("YOU ARE CAPTAIN AMERICA! \n Injected with an experimental super-serum, Rogers emerged from the treatment with heightened endurance, strength, and reaction time. With extensive training and an indestructible Vibranium shield, Rogers soon became the country's ultimate weapon: CAPTAIN AMERICA!")
+elif add <=21 and add >=19:
+    print("YOU ARE THOR! \n Nordic legend tells the tale of the son of Odin, the heir to the throne of Asgard - he is THOR, renowned as the mightiest hero of mythology! Thor's strength, endurance, and quest for battle are far greater than his Asgardian brethren. The mighty Thor wields an enchanted Uru hammer, Mjolnir, and is master of thunder and lightning")  
+elif add <=10 and add >=8 :
+    print("YOU ARE BLACK WIDOW! \n Natasha Romanoff is the super-spy known as the Black Widow! Trained extensively in the art of espionage and outfitted with state-of-the-art equipment, Black Widow's combat skills are virtually unmatched. One of S.H.I.E.L.D's most valuable agents, she has carried out numerous black-ops missions and has recently been assigned by Director Nick Fury to keep an eye on the Avengers.")
+    
+
+
